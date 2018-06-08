@@ -22,6 +22,9 @@ class Doctor
   end
   
   def patients
-    Appointment.all.collect {|patient| patient.doctor}
+    Appointment.all.collect {|appointment| appointment.patient}
+  end
+    def genres
+    Song.all.collect {|song| song.genre}
   end
 end 
